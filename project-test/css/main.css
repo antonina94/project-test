@@ -1021,12 +1021,14 @@ img {
   display: block;
   max-width: 335px;
   height: 335px;
-  background-image: url(..//images/products-img/icecream-desk-1x.jpg);
+  background-image: url(../images/products-img/icecream-desk-1x.png);
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
   background-size: cover;
   text-align: center;
+  position: relative;
+  margin-bottom: -50px;
 }
 
 .products-label {
