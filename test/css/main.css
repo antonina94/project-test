@@ -73,17 +73,11 @@ img {
 }
 
 .container {
-  width: 100%;
+  min-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
   padding-right: 20px;
   padding-left: 20px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 479px) {
-  .container {
-    min-width: 320px;
-    max-width: 480px;
-  }
 }
 
 @media screen and (min-width: 480px) {
@@ -95,12 +89,16 @@ img {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    padding-right: 34px;
+    padding-left: 34px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     width: 1280px;
+    padding-right: 115px;
+    padding-left: 115px;
   }
 }
 
@@ -906,7 +904,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .products {
     padding-top: 127px;
     padding-bottom: 119px;
@@ -935,11 +933,12 @@ img {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
+  margin-bottom: 49px;
 }
 
 .products-container {
   width: 100%;
-  height: 485px;
+  min-height: 485px;
   background: #FFB8CA;
   border-radius: 24px;
   padding: 161px 40px 45px 40px;
@@ -977,19 +976,35 @@ img {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #FFFFFF;
+  margin-bottom: 30px;
 }
 
 .products-container__title::after {
   content: "...";
   font-size: 26px;
-  margin-bottom: 30px;
-  margin-top: 30px;
   color: #FFFFFF;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.hide {
   display: block;
 }
 
+@media screen and (min-width: 768px) {
+  .hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hide {
+    display: none;
+  }
+}
+
 .products-container__text {
-  font-family: DM Sans;
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -1019,16 +1034,79 @@ img {
 .ice-cream-item::before {
   content: "";
   display: block;
-  max-width: 335px;
-  height: 335px;
-  background-image: url(../images/products-img/icecream-desk-1x.png);
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
   background-size: cover;
   text-align: center;
   position: relative;
-  margin-bottom: -128px;
+}
+
+@media screen and (min-width: 1280px) {
+  .ice-cream-item::before {
+    background-image: url(../images/products/icecream-desk-1x.png);
+    max-width: 335px;
+    height: 335px;
+    margin-bottom: -122px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .ice-cream-item::before {
+    background-image: url(../images/products/icecream-desk-2x.png);
+  }
+}
+
+.ice-cofee-item::before {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+@media screen and (min-width: 1280px) {
+  .ice-cofee-item::before {
+    background-image: url(../images/products/icecofee-desk-1x.png);
+    max-width: 335px;
+    height: 335px;
+    margin-bottom: -122px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .ice-cofee-item::before {
+    background-image: url(../images/products/icecofee-desk-2x.png);
+  }
+}
+
+.milkshakes-item::before {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+@media screen and (min-width: 1280px) {
+  .milkshakes-item::before {
+    background-image: url(../images/products/milk-desk-1x.png);
+    max-width: 335px;
+    height: 335px;
+    margin-bottom: -122px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .milkshakes-item::before {
+    background-image: url(../images/products/milk-desk-2x.png);
+  }
 }
 
 .products-label {
@@ -1063,10 +1141,6 @@ img {
 
 .checkbox-hidden {
   appearance: none;
-}
-
-.hide {
-  display: none;
 }
 
 .checkbox-hidden:checked ~ .text-hidden {
