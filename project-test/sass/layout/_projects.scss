@@ -1,0 +1,123 @@
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.card-list {
+  margin-bottom: -30px;
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+  @include desk {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+// .card-list__item:not(:nth-child(3n)) {
+//   margin-right: 30px;
+//   width: 370px;
+// }
+
+.card-list__item {
+  margin-bottom: 30px;
+  @include tab {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @include desk {
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+}
+
+/* Project-title */
+.projects {
+  flex-grow: 1;
+  padding: 20px 24px;
+  background-color: var(--white-color);
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-top: 0;
+  box-sizing: border-box;
+}
+
+// .projects {
+//   @include tab {
+//     flex-grow: 1;
+//   }
+// }
+
+.project__title {
+  color: var(--primary-text-color);
+  @include font(18px, 700, 2, 0.06em);
+  margin-bottom: 4px;
+}
+
+/* Project-text */
+.project__text {
+  color: var(--secondery-text-color);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
+
+.card-list__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    box-shadow: var(--portfolio-shadow-link);
+    .overlay {
+      transform: translateY(0);
+    }
+  }
+}
+
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-color);
+  color: var(--white-color);
+  @include font(12px, null, 1.5, 0.03em);
+  @media screen and (max-width: 479px) {
+    padding: 49px 24px;
+  }
+  @include tel {
+    padding: 77px 24px;
+    font-size: 18px;
+  }
+
+  @include tab {
+    padding: 49px 24px;
+    font-size: 18px;
+  }
+  @include desk {
+    padding: 63px 24px;
+    font-size: 18px;
+  }
+  transform: translatey(101%);
+  transition-property: transform;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}

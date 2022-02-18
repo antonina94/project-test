@@ -1,0 +1,60 @@
+.button-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @include tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include desk {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+.button-list__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.button-list__item:nth-child(4) {
+  margin-bottom: -15px;
+}
+.button-list__item:nth-child(5) {
+  margin-bottom: -15px;
+}
+
+.button.btn-active {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+.button {
+  color: var(--primary-text-color);
+  margin-bottom: 15px;
+  min-width: 38px;
+  display: block;
+  background-color: var(--bg-color3);
+  @include font(16px, 500, 1.6, 0.03em);
+  text-align: center;
+  font-family: inherit;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    box-shadow: var(--btn-shadow);
+  }
+  @include tab {
+    margin-bottom: 0;
+  }
+  @include desk {
+    margin-bottom: 0;
+  }
+}

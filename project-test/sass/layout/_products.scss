@@ -1,0 +1,169 @@
+.products {
+  padding-top: 121px;
+  padding-bottom: 98px;
+  @include tab {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+  @include desk {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+}
+
+.products-text {
+  font-family: "Titan One" sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
+  margin-bottom: 15px;
+}
+
+.products-title {
+  font-family: "Titan One" sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+  // margin-bottom: 144px;
+}
+
+.products-container {
+  width: 100%;
+  height: 485px;
+  background: #FFB8CA;
+border-radius: 24px;
+padding: 161px 40px 45px 40px;
+@media screen and (min-width: 768px) {
+  padding: 152px 11px 40px 11px
+}
+@media screen and (min-width: 1280px) {
+  padding: 163px 44px 50px 44px;
+}
+}
+
+.container-ice-coffe {
+  background: #F0D1A5;
+}
+
+.container-milkshakes {
+  background: #C2E297
+}
+
+.products-list__item:not(:last-child) {
+  margin-bottom:130px;
+}
+
+.products-container__title {
+  font-family: "Titan One" sans-serif;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.products-container__title::after {
+  content: "...";
+  font-size: 26px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+ color: #FFFFFF;
+ display: block;
+}
+
+
+.products-container__text {
+font-family: DM Sans;
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.5;
+text-align: center;
+letter-spacing: 0.04em;
+color: #FFFFFF;
+margin-bottom: 30px;
+}
+
+.products-list {
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+
+.ice-cream-item::before {
+  content: "";
+    display: block;
+    max-width: 335px;
+    height: 335px;
+    background-image: url(..//images/products-img/icecream-desk-1x.jpg);
+    background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  background-size: cover;
+  text-align: center;
+}
+
+.products-label {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: auto;
+}
+
+
+.products-icon {
+  fill: #d41443;
+}
+
+.product-text {
+  font-family: DM Sans;
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.5;
+text-align: center;
+letter-spacing: 0.04em;
+color: #d41443;
+}
+
+.text-hidden {
+	display: none;
+}
+.checkbox-hidden {
+	appearance: none;
+}
+.hide {
+	display: none;
+}
+.checkbox-hidden:checked ~ .text-hidden {
+	display: block;
+}
+.checkbox-hidden:checked ~ .products-label {
+	display: none;
+}
+.checkbox-hidden:checked ~ .products-label  {
+	display: flex;
+}
+

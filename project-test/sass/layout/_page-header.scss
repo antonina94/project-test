@@ -1,0 +1,131 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-nav {
+  display: none;
+  @include tab {
+    display: block;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  @include tab {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Logo */
+.logo {
+  font-family: "Raleway", sans-serif;
+  @include font(26px, 700, 1.19, 0.03em);
+}
+
+.header__logo {
+  color: var(--primary-text-color);
+  @include tab {
+    margin-right: 88px;
+  }
+  @include desk {
+    margin-right: 93px;
+  }
+}
+
+.logo .accent {
+  color: var(--accent-color);
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-list__link {
+  position: relative;
+  display: flex;
+  color: var(--primary-text-color);
+  @include font(14px, 500, 1.14, 0.02em);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header-list__link.current {
+  color: var(--accent-color);
+  &::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: "";
+    width: 48px;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 2px;
+    display: flex;
+    width: 100%;
+  }
+}
+
+.header-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.heder-contact-list__item:not(:last-child) {
+  @include tab {
+    margin-bottom: 10px;
+  }
+  @include desk {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.header-contact-list {
+  margin-left: auto;
+  display: none;
+  margin-left: auto;
+  @include tab {
+    display: block;
+  }
+  @include desk {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-contact-list__icon {
+  margin-right: 10px;
+  fill: var(--secondery-text-color);
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.header-contact-list__link {
+  color: var(--secondery-text-color);
+  @include font(14px, 500, 1.14, 0.02em);
+  display: flex;
+  align-items: center;
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    .header-contact-list__icon {
+      fill: var(--accent-color);
+    }
+  }
+}

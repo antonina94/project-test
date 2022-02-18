@@ -1,0 +1,17 @@
+.btn {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  @include font(16px, 700, 1.87, 0.06em);
+  border-radius: 4px;
+  font-family: inherit;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  min-height: 50px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: inherit;
+}

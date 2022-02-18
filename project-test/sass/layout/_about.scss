@@ -1,0 +1,68 @@
+.about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.icon-tasks {
+  width: 100%;
+  height: 120px;
+  background-color: var(--bg-color3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.about-icon-list {
+  margin-bottom: -30px;
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+  @include desk {
+    display: flex;
+    margin-left: -30px;
+  }
+}
+
+.about-icon-list__item {
+  margin-bottom: 30px;
+  @include tab {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @include desk {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
+}
+
+// .about-icon-list__item:nth-child(odd) {
+//   @media screen and (min-width: 768px) {
+//     margin-right: 30px;
+//   }
+// }
+
+.about-list__title {
+  text-transform: uppercase;
+  @include font(14px, 700, 1.17, 0.03em);
+  margin-bottom: 10px;
+  text-align: center;
+  @include tab {
+    text-align: justify;
+  }
+  @include desk {
+    text-align: justify;
+  }
+}
+
+.about-list__text {
+  color: var(--secondery-text-color);
+  @include font(14px, null, 1.71, 0.03em);
+}

@@ -1,0 +1,54 @@
+.work {
+  display: none;
+}
+
+.work {
+  @include desk {
+    padding-bottom: 94px;
+    display: block;
+  }
+}
+
+.work-list {
+  @include desk {
+    display: flex;
+    margin-left: -30px;
+  }
+}
+.work-list__item {
+  @include desk {
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+}
+
+.work__title {
+  @include desk {
+    margin-bottom: 50px;
+  }
+}
+
+.section-title {
+  @include desk {
+    text-align: center;
+    @include font(36px, 700, 1.16, 0.03em);
+  }
+}
+
+.thumb {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  padding: 27px;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--white-color);
+  @include font(14px, 700, 1.14, 0.03em);
+  text-transform: uppercase;
+  text-align: center;
+}
