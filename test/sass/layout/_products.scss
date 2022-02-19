@@ -33,7 +33,13 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
-   margin-bottom: 49px;
+   margin-bottom: 31px;
+   @media screen and (min-width: 768px) {
+    margin-bottom: 39px;
+   }
+   @media screen and (min-width: 1280px) {
+    margin-bottom: 49px;
+   }
 }
 
 .products-container {
@@ -59,7 +65,7 @@ padding: 161px 40px 45px 40px;
 }
 
 .products-list__item:not(:last-child) {
-  margin-bottom:130px;
+  margin-bottom:17px;
 }
 
 .products-container__title {
@@ -79,6 +85,7 @@ margin-bottom: 30px;
  color: #FFFFFF;
  display: block;
  margin-bottom: 30px;
+margin-top: 30px;
 }
 
 
@@ -127,6 +134,26 @@ margin-bottom: 30px;
   background-size: cover;
   text-align: center;
   position: relative;
+    background-image: url(../images/products/ice-cream-mob-1x.png);
+    max-width: 249px;
+   height: 252px;
+   margin-bottom: -122px;
+   @media (min-device-pixel-ratio: 2),
+   (min-resolution: 192dpi),
+   (min-resolution: 2dppx) {
+    background-image: url(../images/products/ice-cream-mob-2x.png);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/products/ice-cream-tab-1x.png);
+      max-width: 220px;
+     height: 226px;
+     margin-bottom: -122px;
+     @media (min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-cream-tab-2x.png);
+     }
+  }
     @media screen and (min-width: 1280px) {
       background-image: url(../images/products/icecream-desk-1x.png);
       max-width: 335px;
@@ -149,6 +176,26 @@ margin-bottom: 30px;
   background-size: cover;
   text-align: center;
   position: relative;
+  background-image: url(../images/products/ice-cofee-mob-1x.png);
+    max-width: 249px;
+   height: 252px;
+   margin-bottom: -122px;
+   @media (min-device-pixel-ratio: 2),
+   (min-resolution: 192dpi),
+   (min-resolution: 2dppx) {
+    background-image: url(../images/products/ice-cofee-mob-2x.png);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/products/ice-cofee-tab-1x.png);
+      max-width: 220px;
+     height: 226px;
+     margin-bottom: -122px;
+     @media (min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+      background-image: url(../images/products/ice-cofee-tab-2x.png);
+     }
+  }
     @media screen and (min-width: 1280px) {
       background-image: url(../images/products/icecofee-desk-1x.png);
       max-width: 335px;
@@ -171,6 +218,26 @@ margin-bottom: 30px;
   background-size: cover;
   text-align: center;
   position: relative;
+  background-image: url(../images/products/milk-mob-1x.png);
+    max-width: 249px;
+   height: 252px;
+   margin-bottom: -122px;
+   @media (min-device-pixel-ratio: 2),
+   (min-resolution: 192dpi),
+   (min-resolution: 2dppx) {
+    background-image: url(../images/products/milk-mob-2x.png);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/products/milk-tab-1x.png);
+      max-width: 220px;
+     height: 226px;
+     margin-bottom: -122px;
+     @media (min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+      background-image: url(../images/products/milk-tab-2x.png);
+     }
+  }
     @media screen and (min-width: 1280px) {
       background-image: url(../images/products/milk-desk-1x.png);
       max-width: 335px;
@@ -197,10 +264,26 @@ margin-bottom: 30px;
   margin: auto;
 }
 
+.label-ice-cream:hover,
+.label-ice-cream:hover {
+  background-color: #f84f7a ;
+}
+
+.label-ice-cofee:hover,
+.label-ice-cofee:hover {
+  background-color: #f5bd6e ;
+}
+
+.label-milk:hover,
+.label-milk:hover {
+  background-color: #9bcc5b ;
+}
+
 
 .products-icon {
   fill: #d41443;
 }
+
 
 .product-text {
   font-family: DM Sans;
